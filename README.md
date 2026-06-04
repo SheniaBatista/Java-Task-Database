@@ -1,64 +1,66 @@
-# Database Task (Conexão com Banco de Dados)
+# 📋 Gerenciador de Tarefas com Java e PostgreSQL
 
-## 📌 Sobre o projeto
+Aplicação desenvolvida em Java com persistência de dados em PostgreSQL, permitindo o cadastro e gerenciamento de tarefas através do terminal.
 
-Este projeto foi desenvolvido com o objetivo de aprender como conectar uma aplicação Java a um banco de dados.
-
-A aplicação roda no terminal e permite criar tarefas que são armazenadas em um banco de dados PostgreSQL.
-
-O foco principal foi aprender:
-
-* Conectar Java com banco de dados
-* Utilizar JDBC
-* Organizar um projeto Java em pacotes
-* Utilizar Git e GitHub para versionamento
+O projeto foi criado com o objetivo de praticar conceitos fundamentais de desenvolvimento back-end, incluindo conexão com banco de dados utilizando JDBC, organização de código em camadas e operações de persistência de dados.
 
 ---
 
-# 🛠 Tecnologias utilizadas
+## 🚀 Funcionalidades
 
-* Java
-* PostgreSQL
-* JDBC
-* Git
-* GitHub
-* IntelliJ IDEA
+- Cadastro de tarefas
+- Armazenamento de dados em banco PostgreSQL
+- Conexão com banco utilizando JDBC
+- Estrutura organizada em pacotes
+- Execução via terminal
+- Persistência de dados em banco relacional
 
 ---
 
-# 🔷 Estrutura do projeto
+## 🛠️ Tecnologias Utilizadas
 
-```
+- Java
+- PostgreSQL
+- JDBC
+- Git
+- GitHub
+- IntelliJ IDEA
+
+---
+
+## 📁 Estrutura do Projeto
+
+```text
 src
- ├ connection
- │  └ ConnectionFactory.java
- ├ dao
- │  └ TaskDAO.java
- ├ model
- │  └ Task.java
- └ Main.java
+├── connection
+│   └── ConnectionFactory.java
+├── dao
+│   └── TaskDAO.java
+├── model
+│   └── Task.java
+└── Main.java
 ```
 
 ---
 
-# ⚙ Como funciona a aplicação
+## ⚙️ Como Funciona
 
-A aplicação funciona através de um menu simples no terminal. Quando o usuário escolhe criar uma tarefa, o sistema executa os seguintes passos:
-
-1. O usuário roda o projeto, digita 1 e insere o título e a descrição da tarefa
-2. O sistema cria um objeto `Task`
-3. A classe `TaskDAO` envia os dados para o banco
-4. O PostgreSQL salva a tarefa na tabela `tasks`
+1. O usuário executa a aplicação.
+2. Um menu é exibido no terminal.
+3. O usuário informa os dados da tarefa.
+4. A aplicação cria um objeto da entidade Task.
+5. O DAO realiza a comunicação com o banco de dados.
+6. A tarefa é salva na tabela do PostgreSQL.
 
 ---
 
-# 🗄 Banco de dados
+## 🗄️ Banco de Dados
 
-Banco utilizado: PostgreSQL
+O projeto utiliza PostgreSQL para armazenamento das informações.
 
-Tabela utilizada no banco:
+Estrutura da tabela:
 
-```
+```sql
 CREATE TABLE tasks (
     id SERIAL PRIMARY KEY,
     title VARCHAR(100),
@@ -69,22 +71,24 @@ CREATE TABLE tasks (
 
 ---
 
+## 📊 Fluxo da Aplicação
 
-# ▶ Como executar o projeto
-
-1 - Clonar o repositório
-
+```text
+Usuário
+    ↓
+Menu no Terminal
+    ↓
+Cadastro da Tarefa
+    ↓
+Objeto Task
+    ↓
+TaskDAO
+    ↓
+PostgreSQL
 ```
-git clone https://github.com/SheniaBatista/java-task-manager
-```
-
-2 - Abrir o projeto no IntelliJ IDEA
-
-3 - Configurar o banco PostgreSQL local
-
-4 - Criar o banco `taskdb`
-
-5 - Executar a classe `Main.java`
 
 ---
 
+## 🎯 Objetivo
+
+Demonstrar a integração entre Java e PostgreSQL utilizando JDBC, aplicando conceitos de persistência de dados, organização de código e desenvolvimento de aplicações back-end.
